@@ -1,0 +1,6 @@
+{
+  "name": "Amend Trend",
+  "description": "Style Shift - Master Forex, Indian stock markets, and Crypto trading with real market data, realistic paper trading, accurate risk calculations, AI market analysis, interactive lessons, trade reviews, and AI educational studio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

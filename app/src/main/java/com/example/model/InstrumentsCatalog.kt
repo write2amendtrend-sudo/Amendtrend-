@@ -1,0 +1,290 @@
+package com.example.model
+
+object InstrumentsCatalog {
+    val FOREX_INSTRUMENTS = listOf(
+        Instrument(
+            id = "EURUSD",
+            symbol = "EUR/USD",
+            name = "Euro / US Dollar",
+            marketType = MarketType.FOREX,
+            baseCurrency = "EUR",
+            quoteCurrency = "USD",
+            pipOrTickSize = 0.0001,
+            contractSize = 100000.0,
+            minQuantity = 0.01,
+            quantityStep = 0.01,
+            baseSpreadPipsOrTicks = 1.2,
+            exchange = "Interbank FX",
+            tradingSession = "24/5 (Sun 5pm - Fri 5pm EST)"
+        ),
+        Instrument(
+            id = "GBPUSD",
+            symbol = "GBP/USD",
+            name = "British Pound / US Dollar",
+            marketType = MarketType.FOREX,
+            baseCurrency = "GBP",
+            quoteCurrency = "USD",
+            pipOrTickSize = 0.0001,
+            contractSize = 100000.0,
+            minQuantity = 0.01,
+            quantityStep = 0.01,
+            baseSpreadPipsOrTicks = 1.5,
+            exchange = "Interbank FX",
+            tradingSession = "24/5 (London/NY overlap)"
+        ),
+        Instrument(
+            id = "USDJPY",
+            symbol = "USD/JPY",
+            name = "US Dollar / Japanese Yen",
+            marketType = MarketType.FOREX,
+            baseCurrency = "USD",
+            quoteCurrency = "JPY",
+            pipOrTickSize = 0.01,
+            contractSize = 100000.0,
+            minQuantity = 0.01,
+            quantityStep = 0.01,
+            baseSpreadPipsOrTicks = 1.1,
+            exchange = "Interbank FX",
+            tradingSession = "24/5 (Tokyo/NY overlap)"
+        ),
+        Instrument(
+            id = "AUDUSD",
+            symbol = "AUD/USD",
+            name = "Australian Dollar / US Dollar",
+            marketType = MarketType.FOREX,
+            baseCurrency = "AUD",
+            quoteCurrency = "USD",
+            pipOrTickSize = 0.0001,
+            contractSize = 100000.0,
+            minQuantity = 0.01,
+            quantityStep = 0.01,
+            baseSpreadPipsOrTicks = 1.4,
+            exchange = "Interbank FX",
+            tradingSession = "24/5 (Sydney/Asian overlap)"
+        ),
+        Instrument(
+            id = "USDCAD",
+            symbol = "USD/CAD",
+            name = "US Dollar / Canadian Dollar",
+            marketType = MarketType.FOREX,
+            baseCurrency = "USD",
+            quoteCurrency = "CAD",
+            pipOrTickSize = 0.0001,
+            contractSize = 100000.0,
+            minQuantity = 0.01,
+            quantityStep = 0.01,
+            baseSpreadPipsOrTicks = 1.6,
+            exchange = "Interbank FX",
+            tradingSession = "24/5 (NY overlap)"
+        ),
+        Instrument(
+            id = "USDCHF",
+            symbol = "USD/CHF",
+            name = "US Dollar / Swiss Franc",
+            marketType = MarketType.FOREX,
+            baseCurrency = "USD",
+            quoteCurrency = "CHF",
+            pipOrTickSize = 0.0001,
+            contractSize = 100000.0,
+            minQuantity = 0.01,
+            quantityStep = 0.01,
+            baseSpreadPipsOrTicks = 1.5,
+            exchange = "Interbank FX",
+            tradingSession = "24/5 (Zurich/London overlap)"
+        ),
+        Instrument(
+            id = "NZDUSD",
+            symbol = "NZD/USD",
+            name = "New Zealand Dollar / US Dollar",
+            marketType = MarketType.FOREX,
+            baseCurrency = "NZD",
+            quoteCurrency = "USD",
+            pipOrTickSize = 0.0001,
+            contractSize = 100000.0,
+            minQuantity = 0.01,
+            quantityStep = 0.01,
+            baseSpreadPipsOrTicks = 1.8,
+            exchange = "Interbank FX",
+            tradingSession = "24/5 (Asian session)"
+        )
+    )
+
+    val INDIAN_INSTRUMENTS = listOf(
+        Instrument(
+            id = "NIFTY50",
+            symbol = "NIFTY 50",
+            name = "NSE Nifty 50 Index (Simulated Future/ETF)",
+            marketType = MarketType.INDIAN_MARKET,
+            baseCurrency = "INR",
+            quoteCurrency = "INR",
+            pipOrTickSize = 0.05,
+            contractSize = 1.0, // Per contract unit, traded in lots of 25
+            minQuantity = 25.0,
+            quantityStep = 25.0,
+            baseSpreadPipsOrTicks = 2.0,
+            exchange = "NSE India",
+            tradingSession = "09:15 - 15:30 IST",
+            isIndex = true,
+            isTradable = true
+        ),
+        Instrument(
+            id = "BANKNIFTY",
+            symbol = "NIFTY BANK",
+            name = "NSE Nifty Bank Index (Simulated Future/ETF)",
+            marketType = MarketType.INDIAN_MARKET,
+            baseCurrency = "INR",
+            quoteCurrency = "INR",
+            pipOrTickSize = 0.05,
+            contractSize = 1.0, // Per contract unit, traded in lots of 15
+            minQuantity = 15.0,
+            quantityStep = 15.0,
+            baseSpreadPipsOrTicks = 4.0,
+            exchange = "NSE India",
+            tradingSession = "09:15 - 15:30 IST",
+            isIndex = true,
+            isTradable = true
+        ),
+        Instrument(
+            id = "RELIANCE",
+            symbol = "RELIANCE.NS",
+            name = "Reliance Industries Ltd",
+            marketType = MarketType.INDIAN_MARKET,
+            baseCurrency = "INR",
+            quoteCurrency = "INR",
+            pipOrTickSize = 0.05,
+            contractSize = 1.0,
+            minQuantity = 1.0,
+            quantityStep = 1.0,
+            baseSpreadPipsOrTicks = 1.0,
+            exchange = "NSE India",
+            tradingSession = "09:15 - 15:30 IST"
+        ),
+        Instrument(
+            id = "TCS",
+            symbol = "TCS.NS",
+            name = "Tata Consultancy Services Ltd",
+            marketType = MarketType.INDIAN_MARKET,
+            baseCurrency = "INR",
+            quoteCurrency = "INR",
+            pipOrTickSize = 0.05,
+            contractSize = 1.0,
+            minQuantity = 1.0,
+            quantityStep = 1.0,
+            baseSpreadPipsOrTicks = 1.0,
+            exchange = "NSE India",
+            tradingSession = "09:15 - 15:30 IST"
+        ),
+        Instrument(
+            id = "INFY",
+            symbol = "INFY.NS",
+            name = "Infosys Ltd",
+            marketType = MarketType.INDIAN_MARKET,
+            baseCurrency = "INR",
+            quoteCurrency = "INR",
+            pipOrTickSize = 0.05,
+            contractSize = 1.0,
+            minQuantity = 1.0,
+            quantityStep = 1.0,
+            baseSpreadPipsOrTicks = 1.0,
+            exchange = "NSE India",
+            tradingSession = "09:15 - 15:30 IST"
+        ),
+        Instrument(
+            id = "HDFCBANK",
+            symbol = "HDFCBANK.NS",
+            name = "HDFC Bank Ltd",
+            marketType = MarketType.INDIAN_MARKET,
+            baseCurrency = "INR",
+            quoteCurrency = "INR",
+            pipOrTickSize = 0.05,
+            contractSize = 1.0,
+            minQuantity = 1.0,
+            quantityStep = 1.0,
+            baseSpreadPipsOrTicks = 1.0,
+            exchange = "NSE India",
+            tradingSession = "09:15 - 15:30 IST"
+        ),
+        Instrument(
+            id = "TATAMOTORS",
+            symbol = "TATAMOTORS.NS",
+            name = "Tata Motors Ltd",
+            marketType = MarketType.INDIAN_MARKET,
+            baseCurrency = "INR",
+            quoteCurrency = "INR",
+            pipOrTickSize = 0.05,
+            contractSize = 1.0,
+            minQuantity = 1.0,
+            quantityStep = 1.0,
+            baseSpreadPipsOrTicks = 1.0,
+            exchange = "NSE India",
+            tradingSession = "09:15 - 15:30 IST"
+        )
+    )
+
+    val CRYPTO_INSTRUMENTS = listOf(
+        Instrument(
+            id = "BTCUSDT",
+            symbol = "BTC/USDT",
+            name = "Bitcoin / Tether",
+            marketType = MarketType.CRYPTO,
+            baseCurrency = "BTC",
+            quoteCurrency = "USDT",
+            pipOrTickSize = 0.1,
+            contractSize = 1.0,
+            minQuantity = 0.001,
+            quantityStep = 0.001,
+            baseSpreadPipsOrTicks = 1.5,
+            exchange = "Crypto Spot Global",
+            tradingSession = "24/7 Continuous"
+        ),
+        Instrument(
+            id = "ETHUSDT",
+            symbol = "ETH/USDT",
+            name = "Ethereum / Tether",
+            marketType = MarketType.CRYPTO,
+            baseCurrency = "ETH",
+            quoteCurrency = "USDT",
+            pipOrTickSize = 0.01,
+            contractSize = 1.0,
+            minQuantity = 0.01,
+            quantityStep = 0.01,
+            baseSpreadPipsOrTicks = 1.2,
+            exchange = "Crypto Spot Global",
+            tradingSession = "24/7 Continuous"
+        ),
+        Instrument(
+            id = "SOLUSDT",
+            symbol = "SOL/USDT",
+            name = "Solana / Tether",
+            marketType = MarketType.CRYPTO,
+            baseCurrency = "SOL",
+            quoteCurrency = "USDT",
+            pipOrTickSize = 0.01,
+            contractSize = 1.0,
+            minQuantity = 0.1,
+            quantityStep = 0.1,
+            baseSpreadPipsOrTicks = 1.5,
+            exchange = "Crypto Spot Global",
+            tradingSession = "24/7 Continuous"
+        ),
+        Instrument(
+            id = "BNBUSDT",
+            symbol = "BNB/USDT",
+            name = "BNB / Tether",
+            marketType = MarketType.CRYPTO,
+            baseCurrency = "BNB",
+            quoteCurrency = "USDT",
+            pipOrTickSize = 0.01,
+            contractSize = 1.0,
+            minQuantity = 0.01,
+            quantityStep = 0.01,
+            baseSpreadPipsOrTicks = 1.0,
+            exchange = "Crypto Spot Global",
+            tradingSession = "24/7 Continuous"
+        )
+    )
+
+    val ALL_INSTRUMENTS = FOREX_INSTRUMENTS + INDIAN_INSTRUMENTS + CRYPTO_INSTRUMENTS
+
+    fun findById(id: String): Instrument? = ALL_INSTRUMENTS.find { it.id.equals(id, ignoreCase = true) }
+}
